@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Graficar</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="atras">Atras</string>
+    <string name="title_activity_dibujo">dibujo</string>
+    <string name="salir">Salir</string>
+    <string name="compilar">Compilar</string>
+    <string name="hintInput">Escriba los comandos necesarios para realizar las figuras que necesita</string>
+</resources>
