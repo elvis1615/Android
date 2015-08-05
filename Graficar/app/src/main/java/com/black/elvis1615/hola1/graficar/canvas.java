@@ -49,27 +49,24 @@ public class canvas extends View {
                         break;
             }
 
-            if((int)Math.round(c.figura)==1)
+            switch ((int)c.figura)
             {
-                canvas.drawCircle(c.x, c.y, c.t, paint);
-            }
-            else if((int)Math.round(c.figura)==2)
-            {
-            canvas.drawRect(c.x, c.y, c.t, c.t, paint);
-            }
-            else if((int)Math.round(c.figura)==3)
-            {
-             canvas.drawRect(c.x,c.y,c.t,c.a,paint);
-            }
-            else if((int)Math.round(c.figura)==4)
-            {
-             canvas.drawLine(c.x,c.y,c.t,c.a,paint);
-            }
-            else if((int)Math.round(c.figura)==5)
-            {
+                case 1:  canvas.drawCircle(c.x, c.y, c.t, paint);
+                    System.out.println("Circulo");
+                    break;
+                case 2:  canvas.drawRect(c.x, c.y, c.t, c.t, paint);
+                    System.out.println("cuadrado");
+                    break;
+
+                case 3:  canvas.drawRect(c.x, c.y, c.t, c.a, paint); break;
+                case 4:  canvas.drawLine(c.x,c.y,c.t,c.a,paint); break;
+                case 5: break;
 
             }
-        }
+
+            }
+
+
     }
 
 }

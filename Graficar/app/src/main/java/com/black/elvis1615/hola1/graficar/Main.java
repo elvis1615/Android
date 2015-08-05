@@ -50,6 +50,9 @@ public class Main extends AppCompatActivity {
     }
 
     public void compilar(View view){
+        errores= new LinkedList<String>();
+        objetos= new LinkedList<Circulo>();
+
         EditText input=(EditText)findViewById(R.id.Input);
         Scanner1 scanner= new Scanner1(new BufferedReader( new StringReader(input.getText().toString())));
 
@@ -70,8 +73,8 @@ public class Main extends AppCompatActivity {
             else
             {
                 ListView lista=(ListView)findViewById(R.id.Error);
-                String []vectr= (String[]) errores.toArray();
-                ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, vectr);
+                String[] array = errores.toArray(new String[errores.size()]);
+                ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, array);
                 lista.setAdapter(adaptador);
 
             }
