@@ -4,13 +4,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 public class dibujo extends AppCompatActivity {
-
+    FrameLayout frame;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dibujo);
+        frame=(FrameLayout)findViewById(R.id.Canbas);
+        canvas c=new canvas(this);
+        frame.addView(c);
     }
 
     @Override

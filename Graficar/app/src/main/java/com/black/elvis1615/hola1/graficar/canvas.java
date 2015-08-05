@@ -49,23 +49,23 @@ public class canvas extends View {
                         break;
             }
 
-            if(c.figura==1)
+            if((int)Math.round(c.figura)==1)
             {
-                canvas.drawCircle(c.x,c.y,c.t,paint);
+                canvas.drawCircle(c.x, c.y, c.t, paint);
             }
-            else if(c.figura==2)
+            else if((int)Math.round(c.figura)==2)
             {
-            canvas.drawRect(c.x,c.y,c.t,c.t,paint);
+            canvas.drawRect(c.x, c.y, c.t, c.t, paint);
             }
-            else if(c.figura==3)
+            else if((int)Math.round(c.figura)==3)
             {
              canvas.drawRect(c.x,c.y,c.t,c.a,paint);
             }
-            else if(c.figura==4)
+            else if((int)Math.round(c.figura)==4)
             {
              canvas.drawLine(c.x,c.y,c.t,c.a,paint);
             }
-            else if(c.figura==5)
+            else if((int)Math.round(c.figura)==5)
             {
 
             }

@@ -1,11 +1,14 @@
 package com.black.elvis1615.hola1.graficar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 
 import java.io.BufferedReader;
 import java.io.StringReader;
@@ -58,6 +61,19 @@ public class Main extends AppCompatActivity {
             int l=objetos.size();
             for(int i=0;i<l;i++) {
                 System.out.println("numero: "+objetos.get(i).figura);
+            }
+            if(errores.isEmpty())
+            {
+                Intent hello=new Intent(this,dibujo.class);
+                startActivity(hello);
+            }
+            else
+            {
+                ListView lista=(ListView)findViewById(R.id.Error);
+                String []vectr= (String[]) errores.toArray();
+                ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, vectr);
+                lista.setAdapter(adaptador);
+
             }
 
         }
